@@ -1,0 +1,65 @@
+
+
+/* Section 1 (Nama kelompok)*/
+#Section1 {
+    color: white;
+    display: grid;
+    grid-template-areas: "Judul" "Kelompok";
+    grid-template-rows: 0.5fr 5fr;
+    padding: 40px 30px;
+    gap: 20px;
+}
+
+#Section1 .Judul {
+    grid-area: Judul;
+    font-size: 250%;
+    text-align: center;
+}
+
+#Section1 .Kelompok {
+    grid-area: Kelompok;
+    display: grid;
+    grid-template-areas: "Nama Nama Nama";
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 20px;
+    padding: 50px;
+}
+
+#Section1 .Kelompok .Nama {
+    grid-area: "Nama";
+    background-color: var(--Warna-Second);
+    color: var(--Warna-Default);
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+#Section1 img {
+    border-radius: 10px;
+    width: 60%;
+}
+
+@media screen and (max-width: 1000px) {
+    #Section1 .Kelompok {
+        display: grid;
+        grid-template-areas:
+            "Nama"
+            "Nama"
+            "Nama"; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-columns: none; 
+    }
+
+    #Section1 img {
+        width: 80px;
+    }
+
+    #Section1 .Kelompok .Nama{
+        flex-direction: row;
+    }
+}
+

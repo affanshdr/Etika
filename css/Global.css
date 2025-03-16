@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald";
+}
+
+:root{
+    --Warna-Default: #0D0D0D;
+    --Warna-Second: #ffffff;
+    --Warna-Ketiga: #00FF00;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../Asset/Oswald/static/Oswald-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bersambung";
+    src: url(../Asset/Playwrite_HU/static/PlaywriteHU-Regular.ttf);
+}
+
+html {  
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "Header Header"
+        "Nav Main";
+    grid-template-columns: 0.5fr 4fr;
+}
+
+header {
+    grid-area: Header;
+    height: 100vh; 
+    position: relative; /* Supaya shadow keluar dari grid */
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    grid-area: Nav;
+    height: 100vh;
+    background-color: var(--Warna-Default);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+main {
+    grid-area: Main;
+    background-color: var(--Warna-Default);
+}
+
+section {
+    height: 100vh;
+    
+    border: solid white;
+}
+
+

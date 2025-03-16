@@ -1,0 +1,66 @@
+header {
+    display: grid;
+    grid-template-areas: 
+    "Judul1 Judul1 Judul1 Judul1"
+    "Gambar Judul2 Judul2 Judul2"
+    "Kelompok . Start Start";
+    grid-template-columns: 3fr 1fr;
+    background-color: var(--Warna-Default);
+    color: var(--Warna-Second);
+    padding: 150px 300px 150px 200px;
+}
+
+header h1:nth-child(1) {
+    grid-area:Judul1;
+    text-align: left;
+    font-size: 80px;
+
+}
+
+header h1:nth-child(2) {
+    grid-area:Judul2;
+    width: 100%;
+    text-align: right;
+    font-size: 80px;
+
+}
+
+header h1:nth-child(3)
+{
+    grid-area:Kelompok;
+    text-align: left center; 
+    font-size: 30px;
+    margin: auto 0;
+}
+
+
+header .img{
+    grid-area: Gambar;
+    width: 200px;
+    display: flex;
+    margin: auto auto;
+}
+
+header a {
+    grid-area: Start;
+    border: 3px solid #096e00;
+    font-size: 30px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: var(--Warna-Default);
+    width: 300px;
+    height: 60px;
+    border-radius: 60px;
+    text-align: center;
+    padding: 6px;
+}
+
+header a:hover {
+    border: 3px solid #096e00;
+    box-shadow: 
+    3px 0 3px #37fe25, /* kanan */
+    0 3px 3px #37fe25, /* bawah */
+    -3px 0 3px #37fe25, /* kiri */
+    0 -3px 3px #37fe25; /* atas */
+}
