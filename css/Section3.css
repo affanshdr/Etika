@@ -1,0 +1,29 @@
+/* Section 2 (Pendahuluan)*/
+
+Section {
+    display: grid;
+    grid-template-areas: "Pendahuluan Pendahuluan"
+    "Deskripsi Gambar";
+    grid-template-rows: 2fr 2fr;
+    color: var(--Warna-Second);
+    padding: 200px 100px;
+}
+
+Section h1:nth-child(1) {
+    grid-area: Pendahuluan;
+    text-align: justify;
+    margin: auto 0;
+}
+
+Section h1:nth-child(2){
+    grid-area: Deskripsi;
+    display: grid;
+    margin: auto 0;
+}
+
+Section img {
+    grid-area: Gambar;
+    width: 350px;
+    margin: auto 0;
+}
+
